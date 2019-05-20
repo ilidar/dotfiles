@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-SCRIPT_PATH=$(readlink -f "$0")
+SCRIPT_PATH=$(greadlink -f "$0")
 SCRIPT_DIR_PATH=$(dirname "$SCRIPT_PATH")
 
 link_file()
@@ -15,3 +15,4 @@ link_file()
 link_file .zshrc
 link_file .gitconfig
 link_file .hgrc
+link_file .bash_profile
