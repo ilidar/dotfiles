@@ -1,0 +1,22 @@
+[ui]
+username = Denys Kotelovych <denys.kotelovych@gmail.com>
+editor = vim 
+style = compact
+paginate = never
+
+[extensions]
+color =
+graphlog =
+rebase =
+purge =
+mq =
+strip =
+
+[color]
+custom.rev = red
+custom.decorate = yellow
+custom.date = green
+custom.author = blue bold
+
+[alias]
+short-log = log -G --template "* {label('custom.rev', node|short)} - ({label('custom.decorate', branch)}) {desc|strip|firstline} ({label('custom.date', date|age)}) <{label('custom.author' , author)}>\n"

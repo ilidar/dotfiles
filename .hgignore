@@ -1,0 +1,12 @@
+syntax: glob
+build
+devel
+xcode
+*.swp
+.DS_Store
+.idea
+.tags
+.tags_sorted_by_file
+*.sublime-project
+*.sublime-workspace
+cmake-build-debug
