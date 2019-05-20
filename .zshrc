@@ -1,32 +1,19 @@
-export ZSH="$HOME/.oh-my-zsh"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
+export EDITOR='subl -w'
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting sublime)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+autoload bashcompinit
+bashcompinit
 
-# Basic
-alias l='ls -l'
-alias ll='ls -1lGa'
-alias q='cd ..'
-alias qq='cd ../..'
+source ~/.bash_profile
+# export PATH="/usr/local/sbin:$PATH"
+export VIRTUAL_ENV_DISABLE_PROMPT=
 
-# Git
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gh='git hist '
-
-# Mercurial
-alias hs='hg status '
-alias ha='hg add '
-alias hc='hg commit'
-alias hl='hg short-log'
-alias hd='hg diff '
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i

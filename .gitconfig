@@ -1,6 +1,6 @@
 [core]
     editor = vim 
-    pager = less -F -X
+	pager = less -F -X
 [color]
     ui = auto
 [alias]
@@ -12,9 +12,9 @@
     type = cat-file -t
     dump = cat-file -p
 [user]
-    email = denys.kotelovych@gmail.com
-    name = Denys Kotelovych
+	email = denys.kotelovych@gmail.com
+	name = Denys Kotelovych
 [pager]
-    diff = false
+	diff = false
 [push]
-    default = simple
+	default = simple
