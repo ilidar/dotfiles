@@ -30,3 +30,13 @@ alias ha='hg add '
 alias hc='hg commit'
 alias hl='hg short-log'
 alias hd='hg diff '
+
+# Catkin Tools
+__catkin_init_profiles()
+{
+    catkin config --profile debug -x _debug --extend /opt/ros/kinetic --cmake-args -DCMAKE_BUILD_TYPE=Debug
+    catkin config --profile release -x _release --extend /opt/ros/kinetic --cmake-args -DCMAKE_BUILD_TYPE=Release
+    catkin profile set debug
+}
+
+alias catkin_init_profiles='__catkin_init_profiles '
